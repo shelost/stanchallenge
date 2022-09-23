@@ -80,12 +80,10 @@ button:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
   }
   #navbar img {
     height: 25px;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     margin-left: 20px;
   }
   #navbar #nav {
@@ -100,7 +98,7 @@ button:hover {
     font-size: 16px;
     font-weight: 400;
     margin: 0;
-    margin-right: 20px;
+    margin-right: 25px;
     -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
   }
@@ -123,6 +121,17 @@ button:hover {
   button:hover {
     background: rgba(255, 255, 255, 0.9);
     padding: 15px 35px 15px 35px;
+  }
+  button.border {
+    margin: 10px;
+    margin-right: 15px;
+    margin-left: 0px;
+    background: rgba(255, 255, 255, 0);
+    border: 2px solid white;
+    color: white;
+  }
+  button.border:hover {
+    background: rgba(255, 255, 255, 0.05);
   }
   #area {
     display: -webkit-box;
@@ -156,7 +165,7 @@ button:hover {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     width: 20%;
-    margin-right: 15px;
+    margin-right: 10px;
     border-radius: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -173,6 +182,22 @@ button:hover {
     margin: 0;
     color: rgba(255, 255, 255, 0.5);
   }
+  #player {
+    max-width: 560px;
+    max-height: 315px;
+    width: 48vw;
+    height: 27vw;
+    background: rgba(255, 255, 255, 0.1);
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin: 20px;
+    border-radius: 25px;
+    margin-top: 240px;
+  }
+  #a {
+    max-width: 600px;
+    width: 50vw;
+  }
   #a #video {
     max-width: 560px;
     max-height: 315px;
@@ -187,8 +212,9 @@ button:hover {
   }
   #a #rocket {
     position: relative;
-    left: 460px;
-    bottom: 120px;
+    pointer-events: none;
+    left: 480px;
+    bottom: 90px;
     animation: hover 0.6s ease-in-out alternate-reverse infinite;
   }
   @-webkit-keyframes hover {
@@ -212,6 +238,7 @@ button:hover {
     }
   }
   #box {
+    margin: 0;
     margin-top: 60px;
     width: 50%;
   }
@@ -235,11 +262,6 @@ button:hover {
   }
   #box .row.second {
     margin-bottom: 20px;
-  }
-  #box .row button.border {
-    margin: 10px;
-    margin-right: 15px;
-    margin-left: 0px;
   }
   #box .row .flex {
     display: -webkit-box;
@@ -278,9 +300,11 @@ button:hover {
             align-items: center;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50px;
-    height: 52px;
+    height: 55px;
     margin: 10px;
     margin-left: 0;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
   }
   #field h3 {
     margin: 0;
@@ -296,6 +320,9 @@ button:hover {
     font-weight: 600;
     font-size: 18px;
     padding-right: 20px;
+  }
+  #field:hover {
+    background: rgba(255, 255, 255, 0.12);
   }
   #countdown {
     margin: auto;
@@ -371,6 +398,338 @@ button:hover {
     margin: 0;
   }
   #area2 #vid p {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.2px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #navbar {
+    top: 0;
+    left: 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 60px;
+    width: 100vw;
+    background: #4801E5;
+    z-index: 5;
+  }
+  #navbar img {
+    height: 25px;
+    margin: 18px 10px 10px 20px;
+  }
+  #navbar #nav {
+    text-align: center;
+    background: black;
+    background: #4801E5;
+    position: relative;
+    height: 0;
+    overflow-y: hidden;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+    opacity: 0;
+    z-index: 3;
+  }
+  #navbar #nav h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 30px;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+  }
+  #navbar #nav h2:hover {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  #navbar #nav.active {
+    opacity: 1;
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    height: 200px;
+  }
+  #navbar #bars {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    top: 12px;
+    right: 15px;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+  }
+  #navbar #bars .bar {
+    margin: 6px;
+    width: 30px;
+    height: 2px;
+    background: white;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+  }
+  #navbar #bars.x .one {
+    -webkit-transform: rotate(45deg) translate(5px, 5px);
+            transform: rotate(45deg) translate(5px, 5px);
+  }
+  #navbar #bars.x .two {
+    -webkit-transform: rotate(-45deg) translate(5px, -5px);
+            transform: rotate(-45deg) translate(5px, -5px);
+  }
+  button {
+    padding: 12px 22px 12px 22px;
+    color: black;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    background: white;
+    margin: 0;
+  }
+  button:hover {
+    background: rgba(255, 255, 255, 0.9);
+  }
+  button.border {
+    background: rgba(255, 255, 255, 0);
+    border: 2px solid white;
+    color: white;
+  }
+  button.border:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  #brackets {
+    margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+  #brackets .bracket {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 40%;
+    margin: 10px;
+    margin-bottom: 20px;
+  }
+  #brackets .bracket h1 {
+    width: 100%;
+    font-size: 18px;
+    padding-bottom: 5px;
+    margin: 0;
+    background: none;
+  }
+  #brackets .bracket h3 {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0;
+  }
+  .video {
+    width: 100vw;
+    height: 55vw;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    position: relative;
+  }
+  #a #rocket {
+    position: relative;
+    display: none;
+    height: 20vw;
+    animation: hover 0.6s ease-in-out alternate-reverse infinite;
+  }
+  @-webkit-keyframes hover {
+    from {
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
+    }
+    to {
+      -webkit-transform: translate(5px, 5px);
+              transform: translate(5px, 5px);
+    }
+  }
+  @keyframes hover {
+    from {
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
+    }
+    to {
+      -webkit-transform: translate(5px, 5px);
+              transform: translate(5px, 5px);
+    }
+  }
+  #box {
+    margin: auto;
+    margin-top: 40px;
+  }
+  #box h1 {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+    font-weight: 600;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-bottom: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  #box .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 10px;
+    margin-bottom: 30px;
+  }
+  #box .row .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #box .expo {
+    text-align: center;
+  }
+  #box .expo h2 {
+    margin: 0;
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+    font-size: 17px;
+  }
+  #box .expo p {
+    margin: auto;
+    margin-bottom: 8px;
+    width: 80%;
+    max-width: 600px;
+    font-weight: 300;
+    letter-spacing: 0.2px;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  #field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    height: 52px;
+    margin-right: 10px;
+  }
+  #field h3 {
+    margin: 0;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-right: 5px;
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  #field input {
+    background: rgba(255, 255, 255, 0);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    padding-right: 10px;
+  }
+  #countdown {
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 30px 50px;
+    border-radius: 25px;
+  }
+  #countdown #clock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  #countdown #clock h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  #countdown #clock p {
+    font-size: 18px;
+    margin: 0 10px 2px 4px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  #countdown h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    margin-top: 18px;
+  }
+  #vid {
+    margin-top: 15px;
+    margin: 25px;
+  }
+  #vid h2 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
+  #vid h1 {
+    font-size: 22px;
+    margin: 0;
+  }
+  #vid p {
     font-size: 15px;
     font-weight: 300;
     letter-spacing: 0.2px;
