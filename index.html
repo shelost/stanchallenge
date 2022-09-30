@@ -49,7 +49,7 @@
                 <div id = 'typeform' data-tf-widget="yyvBa6p9" data-tf-opacity="0"
                 data-tf-hide-headers data-tf-iframe-props="title=My typeform"
                 data-tf-medium="snippet"
-                data-tf-on-ending-button-click=onsubmit
+                data-tf-on-ending-button-click='function(){ alert("bro") }'
                 >
                 </div><script src="//embed.typeform.com/next/embed.js"></script>
                 <!--
@@ -272,15 +272,6 @@ BACK.onclick = () => {
 
 
 // Typeform
-
-window.addEventListener("DOMContentLoaded", function() {
-    var el = document.getElementById("typeform");
-    window.typeformEmbed.makeWidget(el, "https://admin.typeform.com/to/yyvBa6p9", {
-    onSubmit: function() {
-      alert("submited!");
-    }
-  });
-});
 
 function onsubmit(){
     alert("ronno")
