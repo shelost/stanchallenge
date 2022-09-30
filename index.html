@@ -46,6 +46,13 @@
 
             <div class = 'list'>
 
+                <div id = 'typeform' data-tf-widget="yyvBa6p9" data-tf-opacity="0"
+                data-tf-hide-headers data-tf-iframe-props="title=My typeform"
+                data-tf-medium="snippet"
+                data-tf-on-ending-button-click=onsubmit
+                >
+                </div><script src="//embed.typeform.com/next/embed.js"></script>
+                <!--
                 <div class = 'form'>
 
                     <h1> Create Your Stan Store </h1>
@@ -97,6 +104,7 @@
 
                     <button id = 'submit'> Get Started → </button>
                 </div>
+                -->
 
             </div>
         </div>
@@ -138,32 +146,73 @@
 
                 <div class = 'action'>
                     <button id = 'enroll'> Enter the Challenge </button>
-                    <h2 id = 'terms'> Terms & Conditions </h2>
+                    <h2 id = 'terms'> More Information </h2>
                 </div>
 
             </div>
 
             <div id = 'sec2' class = 'sec terms'>
 
-                <h1> Terms & Conditions </h1>
+                <h1> How it works </h1>
 
                 <ul>
                     <li>
-                        The winner will be announced on November 15th, 2022
+                        Fill out the challenge application to launch your Stan account. Don’t worry, your first 30 days
+                        is free so you can complete the challenge without being charged.
                     </li>
                     <li>
-                        Creator who generates the most revenue within 30 days of
-                        registration wins the challenge
+                        Each week you’ll receive exclusive content, resources, coaching & invitations to live events to help you complete the following milestones in 30-days (don’t  worry, your first 30-days is free so you can complete the challenge without being charged.)
+                        <b> Week 1: </b> Establish Creator Monetization Strategy & Build Your Store & Products
+                        <b> Week 2: </b>  Launch your Store & Create Content that Drives Sales
+                        <b> Week 3: </b>  Optimize your Monetization Strategy & Content Marketing Plan
+                        <b> Week 4: </b>  Build a Sales Funnel to 3x Your Income
                     </li>
                     <li>
-                        To participate in the challnge, you may not be an existing Stan
-                        user or have another account on Stan
+                        You can sign up for the challenge anytime before October 31st
                     </li>
                     <li>
-                        We expect integrity from all the participants. Any form of cheating will
-                        result in disqualification at our discretion.
+                        You win the challenge if you drive the most amount of sales in your first 30-days. (i.e. if you
+                        sign up for the challenge on October 5th, your 30 days ends on November 4th)
+                    </li>
+                    <li>
+                        To participate in the challenge, you must be a new Stan user
+                    </li>
+                    <li>
+                        Winner will be established and announced on November 31st.
                     </li>
                 </ul>
+
+                <h1> Why you should join </h1>
+
+                <p>
+                    Because in the past year we've helped content Creators make $3M selling digital products with a Stan Store
+                    and now we want to help you. You can create new profit streams and launch your digital product business
+                    in 30 days and we're gonna show you how. Did we mention it's risk-free to participate in the challenge?
+                </p>
+
+                <h1> What you'll do </h1>
+
+                <ul>
+                    <li>
+                        <b> Create </b> digital product biz or migrate your existing one over for higher conversions
+                    </li>
+                    <li>
+                        <b> Build </b> optimized sales funnels to convert your audience to customers
+                    </li>
+                    <li>
+                        <b> Learn </b> how to market your products to your audience in an authentic way
+                    </li>
+                    <li>
+                        <b> Generate </b> income doing what you love
+                    </li>
+                </ul>
+
+                <h1> No cheating </h1>
+
+                <p>
+                    We expect integrity from all the participants. Any form of cheating will result in disqualification
+                    at our discretion.
+                </p>
 
                 <button id = 'back'> Back to Challenge </button>
             </div>
@@ -218,7 +267,24 @@ BACK.onclick = () => {
     Id('sec1').classList.add('active')
     Id('sec2').classList.remove('active')
 }
-SUBMIT.onclick = submit
+
+//SUBMIT.onclick = submit
+
+
+// Typeform
+
+window.addEventListener("DOMContentLoaded", function() {
+    var el = document.getElementById("typeform");
+    window.typeformEmbed.makeWidget(el, "https://admin.typeform.com/to/yyvBa6p9", {
+    onSubmit: function() {
+      alert("submited!");
+    }
+  });
+});
+
+function onsubmit(){
+    alert("ronno")
+}
 
 //
 
