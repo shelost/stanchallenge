@@ -144,8 +144,8 @@ button:hover {
     padding: 0 3vw;
   }
   #box .big {
-    font-size: 52px;
-    line-height: 60px;
+    font-size: 48px;
+    line-height: 110%;
     font-weight: 400;
     margin-bottom: 20px;
   }
@@ -154,7 +154,7 @@ button:hover {
   }
   #box #rocket {
     position: relative;
-    right: 20px;
+    right: 35px;
     top: 25px;
     display: inline-block;
     -webkit-transform: scale(1.5);
@@ -197,7 +197,7 @@ button:hover {
   }
   .sec.terms h1 {
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
   }
   .sec.terms ul {
@@ -245,7 +245,7 @@ button:hover {
     overflow: hidden;
   }
   .form h1 {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 400;
     margin: 20px;
     margin-left: 0;
@@ -345,7 +345,7 @@ button:hover {
     border-radius: 15px;
   }
   .tagline {
-    width: 60%;
+    width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -356,13 +356,13 @@ button:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     margin-top: 10px;
   }
   .tagline h2 {
     text-align: center;
     width: 100%;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 130%;
     font-weight: 300;
     margin: 0;
@@ -375,13 +375,25 @@ button:hover {
   }
   .tagline img {
     margin: auto;
-    height: 80px;
+    height: 70px;
   }
   .expo {
-    width: 70%;
+    width: 90%;
   }
   .expo h1 {
-    font-size: 18px;
+    font-size: 22px;
+    margin: 30px 0 20px 0;
+  }
+  .expo .description p {
+    margin: auto;
+    margin-bottom: 15px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    line-height: 130%;
+  }
+  .expo .description p b {
+    font-weight: 400;
   }
   .expo .row {
     display: -webkit-box;
@@ -390,26 +402,31 @@ button:hover {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    margin-bottom: 15px;
   }
   .expo .row .num {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     line-height: 28px;
-    background: white;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    color: black;
+    color: white;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
     margin-right: 15px;
   }
   .expo .row h2 {
-    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
     font-weight: 300;
     line-height: 24px;
     letter-spacing: 0.2px;
-    margin-top: 17px;
+    margin: 0;
+    margin-top: 1px;
   }
   .action {
     margin-top: 40px;
@@ -512,25 +529,38 @@ button:hover {
     max-width: 800;
     margin: auto;
     margin-top: 100px;
+    padding-bottom: 100px;
+    letter-spacing: 0.3px;
   }
   #faq .questions .big {
     font-size: 40px;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
   }
-  #faq .questions .question {
-    margin-bottom: 35px;
-  }
-  #faq .questions .question h1 {
+  #faq .questions h1 {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     margin: 0;
+    margin-top: 40px;
   }
-  #faq .questions .question p {
+  #faq .questions li {
     font-size: 16px;
+    line-height: 130%;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.8);
     margin: 0;
     margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  #faq .questions b {
+    font-weight: 600;
+  }
+  #faq .questions p {
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 25px;
+    margin-top: 15px;
     margin-bottom: 20px;
   }
 }
@@ -739,7 +769,7 @@ button:hover {
         -ms-flex-align: center;
             align-items: center;
     background: rgba(255, 255, 255, 0.1);
-    padding: 15px 20px;
+    padding: 10px 15px;
     border-radius: 15px;
     width: 80vw;
     margin: auto;
@@ -815,7 +845,6 @@ button:hover {
     margin-top: 30px;
     margin-bottom: 20px;
     border-radius: 15px;
-    border: 1px solid white;
   }
   .tagline {
     width: 80%;
@@ -854,11 +883,23 @@ button:hover {
     width: 80%;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-    padding: 15px 15px 25px 25px;
+    padding: 0px 15px 25px 25px;
   }
   .expo h1 {
     font-size: 18px;
     text-align: center;
+    margin-top: 30px;
+  }
+  .expo .description {
+    width: 95%;
+    margin: auto;
+  }
+  .expo .description p {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 200;
+  }
+  .expo .description p b {
+    font-weight: 500;
   }
   .expo .row {
     display: -webkit-box;
@@ -867,26 +908,30 @@ button:hover {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    margin: 20px auto;
+    width: 95%;
   }
   .expo .row .num {
     width: 30px;
     height: 30px;
     line-height: 28px;
-    background: white;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
+    font-weight: 500;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    color: black;
+    color: white;
     text-align: center;
     font-size: 16px;
+    margin: 0;
     margin-right: 15px;
   }
   .expo .row h2 {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 300;
     line-height: 24px;
     letter-spacing: 0.2px;
-    margin-top: 17px;
+    margin: 0;
   }
   .action {
     margin-top: 40px;
@@ -975,25 +1020,40 @@ button:hover {
     width: 90%;
     max-width: 800;
     margin: auto;
+    margin-top: 20px;
+    padding-bottom: 100px;
+    letter-spacing: 0.3px;
   }
   #faq .questions .big {
-    font-size: 28px;
-    margin-bottom: 30px;
+    font-size: 40px;
+    line-height: 120%;
+    margin-bottom: 0px;
   }
-  #faq .questions .question {
-    margin-bottom: 35px;
-  }
-  #faq .questions .question h1 {
+  #faq .questions h1 {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     margin: 0;
+    margin-top: 30px;
   }
-  #faq .questions .question p {
+  #faq .questions li {
     font-size: 16px;
+    line-height: 130%;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.8);
     margin: 0;
     margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  #faq .questions b {
+    font-weight: 600;
+  }
+  #faq .questions p {
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 25px;
+    margin-top: 15px;
     margin-bottom: 20px;
   }
 }
