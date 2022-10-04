@@ -60,53 +60,49 @@ button:hover {
 }
 
 @media screen and (min-width: 1000px) {
-  #navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 80px;
-    width: 100vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
+  /*
+    #navbar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 80px;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 3;
+        //background: #4801E5;
+        //background-image: linear-gradient(to right, #4801E5, #0030dd);
+        //background: black;
+
+        img{
+            height: 30px;
+            margin-top: 3px;
+            margin-left: 25px;
+        }
+
+        #nav{
+            display: flex;
             align-items: center;
-    z-index: 3;
-  }
-  #navbar img {
-    height: 30px;
-    margin-top: 3px;
-    margin-left: 25px;
-  }
-  #navbar #nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-right: 10px;
-    background: rgba(0, 0, 0, 0.1);
-    -webkit-backdrop-filter: blur(30px);
+            margin-right: 10px;
+            background: rgba(black, 0.1);
             backdrop-filter: blur(30px);
-    height: 50px;
-    border-radius: 30px;
-    padding: 0 10px;
-  }
-  #navbar #nav h2 {
-    font-size: 15px;
-    font-weight: 400;
-    margin: 0 15px;
-    -webkit-transition: 0.2s ease;
-    transition: 0.2s ease;
-  }
-  #navbar #nav h2:hover {
-    color: rgba(255, 255, 255, 0.7);
-  }
+            height: 50px;
+            border-radius: 30px;
+            padding: 0 10px;
+
+            h2{
+                font-size: 15px;
+                font-weight: 400;
+                margin: 0 15px;
+                transition: 0.2s ease;
+                &:hover{
+                    color: rgba(white, 0.7);
+                }
+            }
+        }
+    }
+    */
   #main {
     position: absolute;
     top: 0;
@@ -124,7 +120,7 @@ button:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-top: 55px;
+    padding-top: 0px;
   }
   #box {
     display: -webkit-box;
@@ -134,23 +130,31 @@ button:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     width: 40vw;
     padding: 0 3vw;
+    margin-top: 45px;
+  }
+  #box img {
+    height: 35px;
   }
   #box .big {
     font-size: 48px;
     line-height: 110%;
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
   }
   #box .big span {
     font-weight: 800;
+  }
+  #box .big .nowrap {
+    white-space: nowrap;
   }
   #box #rocket {
     position: relative;
@@ -164,7 +168,7 @@ button:hover {
     width: 70vw;
     margin: 2vw;
     padding-bottom: 30px;
-    border-radius: 10px;
+    border-radius: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -244,8 +248,11 @@ button:hover {
     border-radius: 15px;
     overflow: hidden;
   }
+  .form {
+    margin-top: 20px;
+  }
   .form h1 {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 400;
     margin: 20px;
     margin-left: 0;
@@ -337,15 +344,15 @@ button:hover {
             transform: scale(1.02);
   }
   #video {
-    width: 560px;
-    height: 315px;
+    width: 50vw;
+    height: 28.125vw;
     background: black;
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 15px;
   }
   .tagline {
-    width: 90%;
+    width: 50vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -360,29 +367,33 @@ button:hover {
     margin-top: 10px;
   }
   .tagline h2 {
-    text-align: center;
     width: 100%;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 130%;
-    font-weight: 300;
+    font-weight: 200;
     margin: 0;
     color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   .tagline h2 span {
-    font-weight: 700;
+    font-weight: 600;
     color: white;
   }
   .tagline img {
     margin: auto;
-    height: 70px;
+    height: 90px;
+    margin-bottom: 10px;
   }
   .expo {
-    width: 85%;
+    width: 46vw;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.8vw 2vw;
+    margin-top: 20px;
+    border-radius: 15px;
   }
   .expo h1 {
-    font-size: 22px;
-    margin: 30px 0 20px 0;
+    font-size: 20px;
+    margin: 0px 0 20px 0;
   }
   .expo .description p {
     margin: auto;
@@ -408,14 +419,14 @@ button:hover {
     width: 28px;
     height: 28px;
     line-height: 28px;
-    background: rgba(255, 255, 255, 0.1);
+    background: white;
     border-radius: 20px;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    color: white;
+    color: black;
     text-align: center;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 800;
     margin: 0;
     margin-right: 15px;
   }
@@ -666,6 +677,25 @@ button:hover {
     width: 100vw;
     padding-top: 30px;
   }
+  #box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #box img {
+    height: 25px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 30px;
+  }
   #box .big {
     text-align: center;
     width: 90%;
@@ -679,7 +709,6 @@ button:hover {
     font-weight: 800;
   }
   #graphic {
-    padding-bottom: 30px;
     border-radius: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -699,29 +728,67 @@ button:hover {
   }
   #terms {
     cursor: pointer;
+    padding-bottom: 20px;
+    padding-top: 10px;
   }
   .sec {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .sec.terms {
-    width: 95%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    display: none;
+    color: black;
+    letter-spacing: 0px;
   }
   .sec.terms h1 {
     margin: 0;
-    padding-top: 40px;
+    padding-top: 20px;
     font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  .sec.terms ul {
+    width: 80%;
+    font-weight: 400;
+    line-height: 135%;
+    margin: 0;
+    margin: auto;
+    margin-top: 20px;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+    color: black;
+  }
+  .sec.terms ul b {
     font-weight: 600;
-    -webkit-transform: translateX(-20px);
-            transform: translateX(-20px);
   }
-  .sec.terms li {
-    margin: 30px;
-    font-weight: 300;
+  .sec.terms ul li {
+    margin-bottom: 20px;
+  }
+  .sec.terms p {
+    width: 85%;
+    color: black;
+    font-weight: 400;
     line-height: 130%;
-    -webkit-transform: translateX(-20px);
-            transform: translateX(-20px);
   }
-  .sec.active {
+  .sec.terms button {
+    margin-top: 40px;
+  }
+  .sec.terms.active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -862,14 +929,13 @@ button:hover {
     margin-top: 10px;
   }
   .tagline h2 {
-    text-align: center;
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 130%;
     font-weight: 300;
     margin: 0;
     color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .tagline h2 span {
     font-weight: 700;
@@ -878,12 +944,13 @@ button:hover {
   .tagline img {
     margin: auto;
     height: 70px;
+    margin-bottom: 20px;
   }
   .expo {
     width: 80%;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-    padding: 0px 15px 25px 25px;
+    padding: 0px 10px 20px 20px;
   }
   .expo h1 {
     font-size: 18px;
@@ -915,12 +982,12 @@ button:hover {
     width: 30px;
     height: 30px;
     line-height: 28px;
-    background: rgba(255, 255, 255, 0.1);
+    background: white;
     border-radius: 20px;
-    font-weight: 500;
+    font-weight: 700;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    color: white;
+    color: black;
     text-align: center;
     font-size: 16px;
     margin: 0;

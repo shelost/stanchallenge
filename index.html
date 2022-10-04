@@ -14,6 +14,8 @@
 </head>
 <body>
 
+
+            <!--
     <div id = 'navbar'>
         <a href = 'index.html'>
             <img src = 'assets/stan.png' alt = 'logo'>
@@ -23,6 +25,7 @@
             <div class = 'bar one'> </div>
             <div class = 'bar two'></div>
         </div>
+
 
         <div id = 'nav'>
             <a href = 'index.html'>
@@ -35,19 +38,25 @@
             <a href = 'faq.html'>
                 <h2 class = 'navbtn'> FAQ </h2>
             </a>
-
         </div>
+
     </div>
+     -->
 
     <div id = 'main'>
 
         <div id = 'box'>
+            <img src = 'assets/stan.png' alt = 'logo'>
             <h1 class = 'big'>
                 Join Stan’s
-                <span> Creator Business Challenge! </span>
-                <span id = 'rocket'> 🚀 </span>
+                    <span>
+                        Creator Business
+                        <span class = 'nowrap'>
+                            Challenge!
+                            <span id = 'rocket'> 🚀 </span>
+                        </span>
+                    </span>
             </h1>
-
 
             <div class = 'list'>
 
@@ -135,31 +144,24 @@
 
 
                 <div class = 'tagline'>
+
                     <h2>
-                    <span> Launch your Creator Business </span> on Stan before Oct 15 for a chance to win
+                        You have the audience, we have the tools. Your journey to become an online entrepreneur in 30 days starts now.
+                    </h2>
+
+                    <h2>
+                    <span> Launch your Creator Business </span> on Stan before Oct 32 for a chance to win
                     </h2>
                     <img src = 'assets/10k.png' alt = '$10,000'>
+
+                    <h2>
+                        Get exclusive access to business tools, creator resources, on-demand D-commerce courses AND 1:1 coaching &
+                        support FOR FREE when you sign up by October 31.
+                    </h2>
                 </div>
 
 
                 <div class = 'expo'>
-
-                    <h1> Introduction </h1>
-
-                    <div class = 'description'>
-                        <p>
-                            <b> You have the audience, we have the tools. </b>
-                            Your journey to become an online entrepreneur in 30 days starts now.
-                        </p>
-                        <p>
-                            Get exclusive access to <b>business tools, creator resources, on-demand D-commerce
-                            courses AND 1:1 coaching & support </b> FOR FREE when you sign up by October 31.
-                        </p>
-                        <p>
-                            Oh, and you'll also enter the race to win $10k if you generate the highest revenue in your
-                            first 30 days.
-                        </p>
-                    </div>
 
                     <h1> How It Works </h1>
 
@@ -181,43 +183,42 @@
 
                 <div class = 'action'>
                     <button id = 'enroll'> Enter the Challenge </button>
-                    <a href = 'faq.html'>
-                        <h2 id = 'terms'> More Information </h2>
-                    </a>
+                    <h2 id = 'terms'> More Information </h2>
                 </div>
 
             </div>
 
-            <!--
+
             <div id = 'sec2' class = 'sec terms'>
 
                 <h1> How it works </h1>
 
                 <ul>
                     <li>
-                        Fill out the challenge application to launch your Stan account. Don’t worry, your first 30 days
-                        is free so you can complete the challenge without being charged.
+                        Fill out the challenge application to launch your Stan account.
+                        Don't worry, your first 30 days is free so you can complete the challenge without being charged.
                     </li>
                     <li>
-                        Each week you’ll receive exclusive content, resources, coaching & invitations to live events to help you complete the following milestones in 30-days (don’t  worry, your first 30-days is free so you can complete the challenge without being charged.)
-                        <br>
-                        <br> <b> Week 1: </b> Establish Creator Monetization Strategy & Build Your Store & Products
-                        <br> <b> Week 2: </b>  Launch your Store & Create Content that Drives Sales
-                        <br> <b> Week 3: </b>  Optimize your Monetization Strategy & Content Marketing Plan
-                        <br> <b> Week 4: </b>  Build a Sales Funnel to 3x Your Income
+                        Each week you'll receive exclusive content, resources, coaching & invitations to live events to
+                        help you complete the following milestones in 30-days (don't worry, your first 30-days is free
+                        so you can complete the challenge without being charged.)
+                        <br> <br> <b> Week 1: </b> Establish Creator Monetization Strategy & Build Your Store & Products
+                        <br> <br> <b> Week 2: </b> Launch your Store & Create Content that Drives Sales
+                        <br> <br> <b> Week 3: </b> Optimize your Monetization Strategy & Content Marketing Plan
+                        <br> <br> <b> Week 4: </b> Build a Sales Funnel to 3x Your Income
                     </li>
                     <li>
-                        You can sign up for the challenge anytime before October 31st
+                        You can sign up for the challenge anytime before October 31
                     </li>
                     <li>
-                        You win the challenge if you drive the most amount of sales in your first 30-days. (i.e. if you
-                        sign up for the challenge on October 5th, your 30 days ends on November 4th)
+                        You win the challenge if you drive the most amount of sales in your first 30 days. (i.e. if you
+                        sign up for the challenge on October 5, your 30 days ends on November 4)
                     </li>
                     <li>
-                        To participate in the challenge, you must be a new Stan user
+                        To participate in the challenge, you must be a new Stan user.
                     </li>
                     <li>
-                        Winner will be established and announced on November 31st.
+                        Winner will be established and announced on November 31.
                     </li>
                 </ul>
 
@@ -255,7 +256,7 @@
 
                 <button id = 'back'> Back to Challenge </button>
             </div>
-            -->
+
 
          </div>
 
@@ -295,13 +296,17 @@ ENROLL.onclick = () => {
     USERNAME.focus()
 }
 
-/*
+
 TERMS.onclick = () => {
-    window.scrollTo({top:0,left:0, behavior: 'smooth'})
-    setTimeout(()=>{
-        Id('sec1').classList.remove('active')
-        Id('sec2').classList.add('active')
-    },300)
+    if (window.innerWidth > 991){
+        window.scrollTo({top:0,left:0, behavior: 'smooth'})
+        setTimeout(()=>{
+            Id('sec1').classList.remove('active')
+            Id('sec2').classList.add('active')
+        },300)
+    }else{
+        Id('sec2').classList.toggle('active')
+    }
 }
 
 BACK.onclick = () => {
@@ -311,7 +316,7 @@ BACK.onclick = () => {
         Id('sec2').classList.remove('active')
     }, 300)
 }
-*/
+
 
 SUBMIT.onclick = submit
 
@@ -322,7 +327,6 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
   get: (searchParams, prop) => searchParams.get(prop),
 });
 
-console.log(params.ref)
 
 function onsubmit(){
     `https://admin.stan.store/register/?ref=${params.ref}`
@@ -348,7 +352,7 @@ let clickLogin = () => {
         email: EMAIL.value,
         password: "edmonddantes",
         timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-        ref_user: "",
+        ref_user: params.ref,
         utm_source: params.utm_source,
         utm_medium: params.utm_medium,
         utm_campaign: "oct-2022-challenge-10k",
@@ -356,7 +360,7 @@ let clickLogin = () => {
 }).then((response) => response.json())
   .then((result) => {
     if(result.status === "success"){
-      window.location = "https://admin.staging.stan.store/auth?token=" + result.token
+      window.location = "https://admin.staging.stan.store/auth?token=" + result.token + '&redirectTo=%2Fsubscribe%3FtrialDays%3D30'
      } else {
         if (result.errors){
             if (result.errors.username){
