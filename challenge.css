@@ -98,9 +98,10 @@ button:hover {
     padding: 0 10px;
   }
   #navbar #nav h2 {
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 500;
     margin: 0 15px;
+    letter-spacing: 0.5px;
     -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
   }
@@ -499,7 +500,7 @@ button:hover {
             align-items: center;
   }
   #container #player {
-    width: 800px;
+    width: 700px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -515,8 +516,8 @@ button:hover {
             align-items: center;
   }
   #container #player #guide {
-    width: 800px;
-    height: calc(800px * 9/16);
+    width: 700px;
+    height: calc(700px * 9/16);
     background: black;
     margin-top: 30px;
     margin-bottom: 20px;
@@ -537,12 +538,24 @@ button:hover {
   }
   #container #player a {
     width: 100%;
-    margin: 0;
+    margin: auto;
   }
   #container #player a p {
     color: #ffce00;
     margin: 0;
     font-weight: 500;
+  }
+  #container #player .btn {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #container #player .btn button {
+    width: 700px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: auto;
+    margin-top: 20px;
   }
   #faq {
     min-height: 100vh;
@@ -629,8 +642,8 @@ button:hover {
     width: 100vw;
   }
   #navbar #nav h2 {
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 22px;
+    font-weight: 600;
     margin: 30px;
     -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
@@ -643,7 +656,7 @@ button:hover {
     margin-bottom: 0;
     padding-top: 10px;
     padding-bottom: 25px;
-    height: 130px;
+    height: 80px;
   }
   #navbar #bars {
     position: absolute;

@@ -75,9 +75,10 @@ button{
             padding: 0 10px;
 
             h2{
-                font-size: 16px;
-                font-weight: 400;
+                font-size: 18px;
+                font-weight: 500;
                 margin: 0 15px;
+                letter-spacing: 0.5px;
                 transition: 0.2s ease;
                 &:hover{
                     color: rgba(white, 0.7);
@@ -435,15 +436,15 @@ button{
         align-items: center;
 
         #player{
-            width: 800px;
+            width: 700px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
 
             #guide{
-                width: 800px;
-                height: calc(800px * 9/16);
+                width: 700px;
+                height: calc(700px * 9/16);
                 background: black;
                 margin-top: 30px;
                 margin-bottom: 20px;
@@ -464,7 +465,7 @@ button{
             }
             a{
                 width: 100%;
-                margin: 0;
+                margin: auto;
                 p{
                     color: #ffce00;
                     margin: 0;
@@ -472,6 +473,17 @@ button{
                 }
 
             }
+            .btn{
+                width: fit-content;
+                button{
+                    width: 700px;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    margin: auto;
+                    margin-top: 20px;
+                }
+            }
+
         }
     }
 
@@ -563,8 +575,8 @@ button{
             width: 100vw;
 
             h2{
-                font-size: 18px;
-                font-weight: 400;
+                font-size: 22px;
+                font-weight: 600;
                 margin: 30px;
                 transition: 0.2s ease;
                 &:hover{
@@ -577,7 +589,7 @@ button{
                 margin-bottom: 0;
                 padding-top: 10px;
                 padding-bottom: 25px;
-                height: 130px;
+                height: 80px;
             }
         }
 
