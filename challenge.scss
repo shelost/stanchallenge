@@ -1,6 +1,7 @@
 html{
     background: black;
     background-image: linear-gradient(to right bottom,#0038FF, #6800ED);
+    background: #4614ec;
     font-family: Plus Jakarta Sans, sans-serif;
     color: white;
     letter-spacing: 0.3px;
@@ -43,7 +44,6 @@ button{
 
 @media screen and (min-width: 1000px){
 
-    /*
     #navbar{
         position: absolute;
         top: 0;
@@ -60,22 +60,22 @@ button{
 
         img{
             height: 30px;
-            margin-top: 3px;
+            margin-top: 5px;
             margin-left: 25px;
         }
 
         #nav{
             display: flex;
             align-items: center;
-            margin-right: 10px;
-            background: rgba(black, 0.1);
+            margin-right: 5px;
+            //background: rgba(black, 0.1);
             backdrop-filter: blur(30px);
             height: 50px;
             border-radius: 30px;
             padding: 0 10px;
 
             h2{
-                font-size: 15px;
+                font-size: 16px;
                 font-weight: 400;
                 margin: 0 15px;
                 transition: 0.2s ease;
@@ -85,7 +85,6 @@ button{
             }
         }
     }
-    */
 
     #main{
         position: absolute;
@@ -94,11 +93,11 @@ button{
         min-height: 100vh;
         width: 100vw;
         //height: 100vh;
-        background-image: linear-gradient(to right bottom, #4801E5, #1342EC);
+        //background-image: linear-gradient(to right bottom, #4801E5, #1342EC);
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        padding-top: 0px;
+        padding-top: 50px;
     }
 
     #box{
@@ -108,7 +107,7 @@ button{
         justify-content: center;
         width: 40vw;
         padding: 0 3vw;
-        margin-top: 45px;
+        margin-top: 10px;
         img{
             height: 35px;
         }
@@ -436,15 +435,15 @@ button{
         align-items: center;
 
         #player{
-            width: 560px;
+            width: 800px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
 
             #guide{
-                width: 560px;
-                height: 315px;
+                width: 800px;
+                height: calc(800px * 9/16);
                 background: black;
                 margin-top: 30px;
                 margin-bottom: 20px;
@@ -453,14 +452,25 @@ button{
             h1{
                 width: 100%;
                 margin: 0;
-                font-size: 22px;
-                font-weight: 600;
+                font-size: 20px;
+                font-weight: 700;
             }
             p{
                 width: 100%;
-                font-size: 16px;
+                font-size: 15px;
                 font-weight: 300;
+                line-height: 140%;
                 color: rgba(white, 0.8);
+            }
+            a{
+                width: 100%;
+                margin: 0;
+                p{
+                    color: #ffce00;
+                    margin: 0;
+                    font-weight: 500;
+                }
+
             }
         }
     }
@@ -519,7 +529,6 @@ button{
 @media screen and (max-width: 1000px){
 
     #navbar{
-
         top: 0;
         left: 0;
         height: fit-content;
@@ -533,11 +542,11 @@ button{
         align-items: center;
 
         img{
-            height: 25px;
-            margin-top: 2px;
+            height: 28px;
+            margin-top: 3px;
             z-index: 6;
             display: block;
-            margin-left: 15px;
+            margin-left: 17px;
         }
 
         #nav{
@@ -568,7 +577,7 @@ button{
                 margin-bottom: 0;
                 padding-top: 10px;
                 padding-bottom: 25px;
-                height: 200px;
+                height: 130px;
             }
         }
 
@@ -621,7 +630,8 @@ button{
         align-items: center;
         img{
             height: 25px;
-            width: fit-content;
+            width: 80px;
+            //width: fit-content;
             margin-bottom: 30px;
         }
 
@@ -819,7 +829,7 @@ button{
     }
 
     .tagline{
-        width: 80%;
+        width: 85%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -829,7 +839,7 @@ button{
             //text-align: center;
             width: 100%;
             font-size: 16px;
-            line-height: 130%;
+            line-height: 135%;
             font-weight: 300;
             margin: 0;
             color: rgba(white, 0.9);
@@ -850,7 +860,7 @@ button{
         width: 80%;
         background: rgba(white, 0.1);
         border-radius: 20px;
-        padding: 0px 10px 20px 20px;
+        padding: 0px 10px 20px 10px;
         h1{
             font-size: 18px;
             text-align: center;
@@ -871,7 +881,7 @@ button{
             display: flex;
             align-items: flex-start;
             margin: 20px auto;
-            width: 95%;
+            width: 90%;
             .num{
                 width: 30px;
                 height: 30px;
@@ -957,15 +967,25 @@ button{
             h1{
                 width: 90%;
                 margin: 0;
-                font-size: 22px;
+                font-size: 24px;
                 font-weight: 600;
             }
             p{
                 width: 90%;
                 font-size: 16px;
-                line-height: 140%;
+                line-height: 150%;
                 font-weight: 300;
                 color: rgba(white, 0.8);
+            }
+            a{
+                width: 90%;
+                margin: 0;
+                p{
+                    width: 100%;
+                    color: #ffce00;
+                    margin: 0;
+                    font-weight: 600;
+                }
             }
         }
     }

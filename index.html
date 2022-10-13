@@ -14,10 +14,8 @@
 </head>
 <body>
 
-
-            <!--
     <div id = 'navbar'>
-        <a href = 'index.html'>
+        <a href = 'https://stan.store'>
             <img src = 'assets/stan.png' alt = 'logo'>
         </a>
 
@@ -26,27 +24,30 @@
             <div class = 'bar two'></div>
         </div>
 
-
         <div id = 'nav'>
             <a href = 'index.html'>
                 <h2 class = 'navbtn'> Enter Challenge </h2>
             </a>
             <a href = 'guide.html'>
-                <h2 class = 'navbtn'> What Products Should I Sell? </h2>
+                <h2 class = 'navbtn'> What is Stan? </h2>
             </a>
 
+            <!--
             <a href = 'faq.html'>
                 <h2 class = 'navbtn'> FAQ </h2>
             </a>
+            -->
         </div>
-
     </div>
-     -->
 
     <div id = 'main'>
 
         <div id = 'box'>
-            <img src = 'assets/stan.png' alt = 'logo'>
+            <!--
+            <a href = 'https://stan.store'>
+                <img id = 'logo' src = 'assets/stan.png' alt = 'logo'>
+            </a>
+            -->
             <h1 class = 'big'>
                 Join Stan’s
                     <span>
@@ -360,8 +361,19 @@ let clickLogin = () => {
 }).then((response) => response.json())
   .then((result) => {
     if(result.status === "success"){
-      window.location = "https://admin.staging.stan.store/auth?token=" + result.token + '&redirectTo=%2Fsubscribe%3FtrialDays%3D30'
-     } else {
+
+    // Analytics
+    sendAnalyticsEvent('signup', {
+        meta: { user_id: result.user_id, username: result.username },
+        props: {
+        	location:'events.stan.store',
+        	eventType:'oct_2022_10k'
+        },
+    })
+
+    window.location = "https://admin.staging.stan.store/auth?token=" + result.token + '&redirectTo=%2Fsubscribe%3FtrialDays%3D30'
+
+    } else {
         if (result.errors){
             if (result.errors.username){
             Id('username_msg_2').classList.add('active')
@@ -377,6 +389,38 @@ let clickLogin = () => {
         }
      }
   });
+}
+
+// Analytics
+function sendAnalyticsEvent(eventName, meta, props) {
+	const payload = {}
+	payload.n = eventName
+	payload.u = window.location.href
+	payload.r = window.document.referrer || null
+	payload.w = window.innerWidth
+
+	meta.sessionUUID = getSessionUUID()
+	if (meta) {
+		payload.m = meta
+	}
+	if (props) {
+		payload.p = props
+	}
+
+	const request = new XMLHttpRequest()
+	request.open('POST', apiUrl, true)
+	request.setRequestHeader('Content-Type', 'application/json')
+	request.send(JSON.stringify(payload))
+}
+
+// Analytics
+const getSessionUUID = () => {
+	const sessionUuid = window.$cookies.get('session_uuid') || UUID()
+	const in10Minutes = 1 / 24 / 6 // js-cookies uses days as base unit
+	window.$cookies.set('session_uuid', sessionUuid, { expires: in10Minutes })
+	window.$cookies.set('session_uuid', sessionUuid, { domain: 'stanwith.me', expires: in10Minutes })
+	window.$cookies.set('session_uuid', sessionUuid, { domain: 'stan.store', expires: in10Minutes })
+	return sessionUuid
 }
 
 function submit(){
@@ -419,3 +463,6 @@ function submit(){
 
 </script>
 </html>
+
+
+
