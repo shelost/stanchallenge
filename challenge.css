@@ -1113,6 +1113,12 @@ button:hover {
     margin: 0;
     font-weight: 600;
   }
+  #container #player button {
+    width: 90vw;
+    position: fixed;
+    bottom: 1vw;
+    left: 5vw;
+  }
   #faq {
     min-height: 100vh;
   }
