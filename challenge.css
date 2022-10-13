@@ -61,9 +61,78 @@ button:hover {
 }
 
 @media screen and (min-width: 1000px) {
+  #timer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    z-index: 4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #timer .bundles {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #timer .bundles .bundle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 5px;
+  }
+  #timer .bundles .bundle h3 {
+    font-size: 16px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    padding: 5px;
+    width: 25px;
+    text-align: center;
+  }
+  #timer .bundles .bundle p {
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    margin-left: 7px;
+    -webkit-transform: translateY(-0.5px);
+            transform: translateY(-0.5px);
+  }
+  #timer h2 {
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 15px;
+    margin-right: 10px;
+    letter-spacing: 0.3px;
+    -webkit-transform: translateY(-0.5px);
+            transform: translateY(-0.5px);
+  }
   #navbar {
     position: absolute;
-    top: 0;
+    top: 55px;
     left: 0;
     height: 80px;
     width: 100vw;
@@ -79,9 +148,9 @@ button:hover {
     z-index: 3;
   }
   #navbar img {
-    height: 30px;
+    height: 25px;
     margin-top: 5px;
-    margin-left: 25px;
+    margin-left: 20px;
   }
   #navbar #nav {
     display: -webkit-box;
@@ -98,9 +167,9 @@ button:hover {
     padding: 0 10px;
   }
   #navbar #nav h2 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
-    margin: 0 15px;
+    margin: 0 10px;
     letter-spacing: 0.5px;
     -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
@@ -123,7 +192,7 @@ button:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-top: 50px;
+    padding-top: 110px;
   }
   #box {
     display: -webkit-box;
@@ -147,7 +216,7 @@ button:hover {
     height: 35px;
   }
   #box .big {
-    font-size: 48px;
+    font-size: 45px;
     line-height: 110%;
     font-weight: 400;
     margin-bottom: 30px;
@@ -255,7 +324,7 @@ button:hover {
     margin-top: 20px;
   }
   .form h1 {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 400;
     margin: 20px;
     margin-left: 0;
@@ -275,8 +344,8 @@ button:hover {
         -ms-flex-align: center;
             align-items: center;
     background: rgba(255, 255, 255, 0.1);
-    padding: 13px 15px;
-    border-radius: 15px;
+    padding: 10px 12px;
+    border-radius: 10px;
     margin-top: 15px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -291,7 +360,7 @@ button:hover {
     margin-bottom: 7px;
   }
   .form .field input {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.4px;
     background: rgba(255, 255, 255, 0);
@@ -498,9 +567,10 @@ button:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-top: 35px;
   }
   #container #player {
-    width: 700px;
+    width: 650px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -516,8 +586,8 @@ button:hover {
             align-items: center;
   }
   #container #player #guide {
-    width: 700px;
-    height: calc(700px * 9/16);
+    width: 650px;
+    height: calc(650px * 9/16);
     background: black;
     margin-top: 30px;
     margin-bottom: 20px;
@@ -531,7 +601,7 @@ button:hover {
   }
   #container #player p {
     width: 100%;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 300;
     line-height: 140%;
     color: rgba(255, 255, 255, 0.8);
@@ -551,7 +621,7 @@ button:hover {
     width: fit-content;
   }
   #container #player .btn button {
-    width: 700px;
+    width: 650px;
     padding-top: 20px;
     padding-bottom: 20px;
     margin: auto;
@@ -602,6 +672,77 @@ button:hover {
 }
 
 @media screen and (max-width: 1000px) {
+  #timer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    z-index: 4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #timer .bundles {
+    margin-top: 4px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #timer .bundles .bundle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 5px;
+  }
+  #timer .bundles .bundle h3 {
+    font-size: 16px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    padding: 5px;
+    width: 25px;
+    text-align: center;
+  }
+  #timer .bundles .bundle p {
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    margin-left: 7px;
+    -webkit-transform: translateY(-0.5px);
+            transform: translateY(-0.5px);
+  }
+  #timer h2 {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+    margin-top: -2px;
+    letter-spacing: 0.3px;
+    -webkit-transform: translateY(-0.5px);
+            transform: translateY(-0.5px);
+  }
   #navbar {
     top: 0;
     left: 0;
@@ -620,17 +761,19 @@ button:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-top: 110px;
   }
   #navbar img {
     height: 28px;
-    margin-top: 3px;
+    margin-top: 8px;
     z-index: 6;
     display: block;
-    margin-left: 17px;
+    margin-left: 25px;
   }
   #navbar #nav {
     text-align: center;
     background: black;
+    background: #000001;
     position: absolute;
     height: 0;
     overflow-y: hidden;
@@ -638,8 +781,10 @@ button:hover {
     transition: 0.2s ease;
     opacity: 0;
     z-index: 3;
-    top: 60px;
-    width: 100vw;
+    top: 180px;
+    left: 5vw;
+    width: 90vw;
+    border-radius: 10px;
   }
   #navbar #nav h2 {
     font-size: 22px;
@@ -657,6 +802,8 @@ button:hover {
     padding-top: 10px;
     padding-bottom: 25px;
     height: 80px;
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
   #navbar #bars {
     position: absolute;
@@ -673,8 +820,8 @@ button:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    top: 12px;
-    right: 15px;
+    top: 123px;
+    right: 25px;
     z-index: 3;
     width: 40px;
     height: 40px;
@@ -1087,7 +1234,7 @@ button:hover {
     width: 100vw;
     height: calc(100vw * 9/16);
     background: black;
-    margin-top: 5px;
+    margin-top: 15px;
     margin-bottom: 20px;
   }
   #container #player h1 {

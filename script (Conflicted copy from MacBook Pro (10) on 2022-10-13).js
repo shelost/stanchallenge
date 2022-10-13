@@ -9,12 +9,11 @@ bars.onclick = () => {
 
 // Set the date we're counting down to
 var countDownDate = new Date("Oct 31, 2022 11:59:59").getTime();
-var distance = 0
 
 let update = () => {
     var now = new Date().getTime();
 
-    distance = countDownDate - now;
+    var distance = countDownDate - now;
 
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

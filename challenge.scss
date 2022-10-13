@@ -44,9 +44,59 @@ button{
 
 @media screen and (min-width: 1000px){
 
+    #timer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 60px;
+        width: 100vw;
+        background: rgba(black, .7);
+        backdrop-filter: blur(10px);
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .bundles{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .bundle{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 5px;
+                h3{
+                    font-size: 16px;
+                    font-weight: 600;
+                    background: rgba(white, 0.15);
+                    border-radius: 5px;
+                    padding: 5px;
+                    width: 25px;
+                    text-align: center;
+                }
+                p{
+                    font-weight: 300;
+                    color: rgba(white, 0.7);
+                    font-size: 14px;
+                    margin-left: 7px;
+                    transform: translateY(-0.5px);
+                }
+            }
+        }
+        h2{
+            font-size: 14px;
+            font-weight: 300;
+            margin-left: 15px;
+            margin-right: 10px;
+            letter-spacing: 0.3px;
+            transform: translateY(-0.5px);
+        }
+    }
+
     #navbar{
         position: absolute;
-        top: 0;
+        top: 55px;
         left: 0;
         height: 80px;
         width: 100vw;
@@ -59,9 +109,9 @@ button{
         //background: black;
 
         img{
-            height: 30px;
+            height: 25px;
             margin-top: 5px;
-            margin-left: 25px;
+            margin-left: 20px;
         }
 
         #nav{
@@ -75,9 +125,9 @@ button{
             padding: 0 10px;
 
             h2{
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: 500;
-                margin: 0 15px;
+                margin: 0 10px;
                 letter-spacing: 0.5px;
                 transition: 0.2s ease;
                 &:hover{
@@ -98,7 +148,7 @@ button{
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        padding-top: 50px;
+        padding-top: 110px;
     }
 
     #box{
@@ -113,7 +163,7 @@ button{
             height: 35px;
         }
         .big{
-            font-size: 48px;
+            font-size: 45px;
             line-height: 110%;
             font-weight: 400;
             margin-bottom: 30px;
@@ -211,7 +261,7 @@ button{
     .form{
         margin-top: 20px;
         h1{
-            font-size: 18px;
+            font-size: 15px;
             font-weight: 400;
             margin: 20px;
             margin-left: 0;
@@ -228,8 +278,8 @@ button{
             display: flex;
             align-items: center;
             background: rgba(white, 0.1);
-            padding: 13px 15px;
-            border-radius: 15px;
+            padding: 10px 12px;
+            border-radius: 10px;
             margin-top: 15px;
             width: fit-content;
             h3{
@@ -241,7 +291,7 @@ button{
                 }
             }
             input{
-                font-size: 15px;
+                font-size: 14px;
                 font-weight: 400;
                 letter-spacing: 0.4px;
                 background: rgba(white, 0);
@@ -435,16 +485,18 @@ button{
         justify-content: center;
         align-items: center;
 
+        margin-top: 35px;
+
         #player{
-            width: 700px;
+            width: 650px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
 
             #guide{
-                width: 700px;
-                height: calc(700px * 9/16);
+                width: 650px;
+                height: calc(650px * 9/16);
                 background: black;
                 margin-top: 30px;
                 margin-bottom: 20px;
@@ -458,7 +510,7 @@ button{
             }
             p{
                 width: 100%;
-                font-size: 15px;
+                font-size: 14px;
                 font-weight: 300;
                 line-height: 140%;
                 color: rgba(white, 0.8);
@@ -476,7 +528,7 @@ button{
             .btn{
                 width: fit-content;
                 button{
-                    width: 700px;
+                    width: 650px;
                     padding-top: 20px;
                     padding-bottom: 20px;
                     margin: auto;
@@ -540,6 +592,57 @@ button{
 
 @media screen and (max-width: 1000px){
 
+    #timer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100px;
+        width: 100vw;
+        background: rgba(black, 0.5);
+        backdrop-filter: blur(10px);
+        z-index: 4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .bundles{
+            margin-top: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .bundle{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 5px;
+                h3{
+                    font-size: 16px;
+                    font-weight: 600;
+                    background: rgba(white, 0.15);
+                    border-radius: 5px;
+                    padding: 5px;
+                    width: 25px;
+                    text-align: center;
+                }
+                p{
+                    font-weight: 300;
+                    color: rgba(white, 0.7);
+                    font-size: 14px;
+                    margin-left: 7px;
+                    transform: translateY(-0.5px);
+                }
+            }
+        }
+        h2{
+            font-size: 14px;
+            font-weight: 300;
+            margin: 0;
+            margin-top: -2px;
+            letter-spacing: 0.3px;
+            transform: translateY(-0.5px);
+        }
+    }
+
     #navbar{
         top: 0;
         left: 0;
@@ -553,17 +656,20 @@ button{
         justify-content: space-between;
         align-items: center;
 
+        margin-top: 110px;
+
         img{
             height: 28px;
-            margin-top: 3px;
+            margin-top: 8px;
             z-index: 6;
             display: block;
-            margin-left: 17px;
+            margin-left: 25px;
         }
 
         #nav{
             text-align: center;
             background: black;
+            background: darken(#4614ec,50%);
             //background: #4801E5;
             position: absolute;
             height: 0;
@@ -571,8 +677,10 @@ button{
             transition: 0.2s ease;
             opacity: 0;
             z-index: 3;
-            top: 60px;
-            width: 100vw;
+            top: 180px;
+            left: 5vw;
+            width: 90vw;
+            border-radius: 10px;
 
             h2{
                 font-size: 22px;
@@ -590,6 +698,7 @@ button{
                 padding-top: 10px;
                 padding-bottom: 25px;
                 height: 80px;
+                box-shadow: 0 10px 30px rgba(black, 0.2);
             }
         }
 
@@ -599,8 +708,8 @@ button{
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            top: 12px;
-            right: 15px;
+            top: 123px;
+            right: 25px;
             z-index: 3;
             width: 40px;
             height: 40px;
@@ -968,11 +1077,12 @@ button{
             justify-content: center;
             align-items: center;
 
+
             #guide{
                 width: 100vw;
                 height: calc(100vw * 9/16);
                 background: black;
-                margin-top: 5px;
+                margin-top: 15px;
                 margin-bottom: 20px;
                 //border-radius: 20px;
             }
